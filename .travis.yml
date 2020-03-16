@@ -7,3 +7,14 @@ before_install:
 
 script:
   - docker run -e CI=true tricaole/docker-react npm run test
+
+  deploy:
+    edge: true
+    provider: elasticbeanstalk
+    region: "ap-southeast-1"
+    app: "docker-react"
+    evn: "DockerReact-env"
+    bucket_name: "elasticbeanstalk-ap-southeast-1-443865620508"
+    bucket_path: "docker-react"
+    on:
+      branch: master
