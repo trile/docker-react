@@ -9,8 +9,7 @@ script:
   - docker run -e CI=true tricaole/docker-react npm run test
 
 deploy:
-  edge: true
-  provider: "elasticbeanstalk"
+  provider: elasticbeanstalk
   region: "ap-southeast-1"
   app: "docker-react"
   evn: "DockerReact-env-1"
