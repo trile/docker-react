@@ -1,6 +1,6 @@
 # Build stage
 FROM node:alpine as builder
-WORKDIR 'usr/app'
+WORKDIR /usr/app
 COPY package*.json ./
 RUN npm install
 COPY . .
